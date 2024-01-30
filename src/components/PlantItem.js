@@ -1,23 +1,29 @@
-import CareScale from './CareScale'
-import '../styles/PlantItem.css'
+// Import des composants nécessaires
+import CareScale from './CareScale';
+import '../styles/PlantItem.css';
 
+// Déclaration du composant React PlantItem
 function PlantItem({ id, cover, name, water, light }) {
-    function handleClick() {
-        console.log('✨ Ceci est un clic ✨')
-    }
-	return (
-		<li className='lmj-plant-item' onClick={handleClick}>
-        <img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
-        {name}
-            <div>
-                <CareScale careType='water' scaleValue={water} />
-                <CareScale careType='light' scaleValue={light} />
-            </div>
+  // dans cette partie, tu mets ton JS propre à ce composant (qui ne sera pas réutilisé ailleurs que dans ce composant, entre la déclaration et le rendu JSX)
+
+  // Fonction gestionnaire de clic
+  function handleClick() {
+    console.log('✨ Ceci est un clic ✨');
+  }
+
+  // Rendu JSX du composant
+  return (
+    // ici, l'attribut onClick de React est l'équivalent d'un AddEventListener sur ton élément, ici lorsque l'on clique dessus, la fonction handleClick est lancée
+    <li className="lmj-plant-item" onClick={handleClick}>
+      <img className="lmj-plant-item-cover" src={cover} alt={`${name} cover`} />
+      {name}
+      <div>
+        <CareScale careType="water" scaleValue={water} />
+        <CareScale careType="light" scaleValue={light} />
+      </div>
     </li>
-)
-    
+  );
 }
 
-
-
-export default PlantItem
+// Export du composant par défaut
+export default PlantItem;
