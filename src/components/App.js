@@ -3,6 +3,7 @@ import logo from '../assets/logo.png'
 // import Cart from './Cart'
 import ShoppingList from './ShoppingList'
 
+
 function App() {
 	return (
 		<div>
